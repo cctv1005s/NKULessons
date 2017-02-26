@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>NKU刷课</title>
+    <link rel="shortcut icon" href="./favicon.icon">
+</head>
+
+<style type="text/css">
+    /*加载动画*/
+    .spinner {
+      width: 100px;
+      height: 100px;
+      margin: 100px auto;
+      background-color: red;
+     
+      border-radius: 100%; 
+      -webkit-animation: scaleout 1.0s infinite ease-in-out;
+      animation: scaleout 1.0s infinite ease-in-out;
+    }
+ 
+    @-webkit-keyframes scaleout {
+      0% { -webkit-transform: scale(0.0) }
+      100% {
+        -webkit-transform: scale(1.0);
+        opacity: 0;
+      }
+    }
+ 
+    @keyframes scaleout {
+      0% {
+        transform: scale(0.0);
+        -webkit-transform: scale(0.0);
+      } 100% {
+        transform: scale(1.0);
+        -webkit-transform: scale(1.0);
+        opacity: 0;
+      }
+    }
+
+    .centerword{
+        text-align: center;
+        font-family: "微软雅黑";
+    }
+
+    #app-main{
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      left: 0;
+      top: 0;
+      z-index: 10;
+    }
+
+    #app-loading{
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      left: 0;
+      top: 0;
+      z-index: 20; 
+      background-color: white;
+    }
+</style>
+
+
+<body>
+
+<div id="app-main">
+
+  <link rel="stylesheet" type="text/css" href="./css/amazeui.min.css">
+  <link rel="stylesheet" type="text/css" href="./css/main.css">
+  <div class="lesson-title">
+      NKU刷课工具 v1
+  </div>
+  <div class="lesson-body am-container">
+      <!--学生的个人信息-->
+      <div class="stu-info am-u-sm-6 am-u-md-6">
+          <!--学生选课的账号和密码-->
+          <div class="stu-info-account">
+              <form class="am-form">
+                  <div class="am-form-group">
+                    <label>学号</label>
+                    <input type="text"  id="stuid" placeholder="学号">
+                  </div>
+                  <div class="am-form-group">
+                    <label>密码</label>
+                    <input type="password" class="" id="stupassword" placeholder="信息门户密码">
+                  </div>
+              </form>
+          </div>
+          
+          <!--学生选课的课程列表-->
+          <div class="stu-info-lesson">
+              <!--搜索课程-->
+              <div class="search-lesson">
+                  
+                  <div class="am-form">
+                      <div class="am-form-group search-lesson-group" >                  
+                        <input type="text" class="searh-input" id="lessonid" placeholder="输入课程id" maxlength="4">
+                        <i class="am-icon-search" id="search-icon"></i>
+                      </div>
+                  </div>
+                  <!-- 搜索结果 -->
+                  <div class="search-result" id="search-result">
+                      <table class="am-table">
+                          <thead>
+                              <tr>
+                                  <th>课程id</th>
+                                  <th>课程名称</th>
+                                  <th>任课教师</th>
+                              </tr>
+                          </thead>
+                          <tbody>
+                              <tr>
+                              </tr>
+                          </tbody>
+                      </table>
+                  <button type="button" class="am-btn am-btn-primary am-disabled" id="add-lesson">添加选课</button>   
+                  </div>
+              </div><!--课程搜索结束-->
+              
+               <div class="lesson-type-chose">
+                  <h4>课程类别选择</h4>
+                  <div class="am-radio">
+                    <label>
+                      <input type="radio" name="doc-radio-1" value="NOPE" checked>
+                      非体育课
+                    </label>
+                  </div>
+                  <div class="am-radio">
+                    <label>
+                      <input type="radio" name="doc-radio-1" value="PE">
+                      体育课
+                    </label>
+                  </div>
+              </div>
+              
+              
+              <!--显示已经在刷课队列的课程-->
+              <div class="lesson-queue">
+                  <h5>刷课队列：</h5>
+                  <ul class="lesson-queue-list">
+                  </ul>
+              </div>
+          </div>
+          
+          <button type="button" class="am-btn am-btn-success am-disabled" id="beginLesson">开始刷课</button>
+          <button type="button" class="am-btn am-btn-warning" id="saveData">保存信息</button>
+      </div>
+      <!--公共的讨论信息-->
+      <div class="public-info am-u-sm-6 am-u-md-6">
+          <!-- 刷课信息 -->
+          <div class="lesson-info">
+              <h5>刷课信息</h5>
+              <div class="lesson-info-box" id="select-lesson-info">
+              </div>
+          </div>
+          <div class="lesson-info">
+              <h5>成功列表</h5>
+              <div class="lesson-info-box" id="success-lesson-info">
+              </div>
+          </div>
+              
+          <!-- 公告板块 -->
+          <div class="publication-info">
+              <h5>一些公告</h5>
+              <div class="publication-body">
+                  软件写得一般~欢迎在下面留言板块吐槽~作者应该都可以看到的哈~~
+                  <br>
+                  <hr>
+                  各位同学，学期末再见！
+              </div>
+          </div>
+      </div>
+  </div>
+  <!-- 留言板块 -->
+  <div class="mark-board am-container">
+      <h5>吐槽区</h5>
+      <iframe src="http://123.206.94.77:4790/" class="outside-branch">
+      </iframe>
+  </div>
+
+</div>
+
+<script type="text/javascript" src="./js/jquery.min.js"></script>
+<script type="text/javascript" src="./js/app.js"></script>
+</body>
+</html>

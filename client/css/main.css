@@ -1,0 +1,108 @@
+body{margin:  0 !important;}
+.lesson-title{
+    width: 100%;height: 50px;line-height: 50px;text-align: center;background: #2C3E50;color: #ECF0F1;
+    position: fixed;
+    z-index: 10;
+}
+
+/*控制滑动条*/
+*::-webkit-scrollbar {
+width: 6px!important;
+height: 6px!important;
+}
+*::-webkit-scrollbar-thumb {
+background-color: #2C3E50;
+}
+
+.lesson-body{
+    padding-top: 50px;
+    z-index: 0;
+}
+.stu-info-account{
+    margin-bottom: 10px;
+    border-bottom: 1px darkblue dashed;
+}
+
+.stu-info{
+    border-right: 1px dashed darkblue;
+}
+.search-lesson{
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px dashed darkblue;
+}
+
+.searh-input{
+    border-radius: 28px !important;
+}
+
+.search-lesson-group{
+    position: relative;
+}
+
+#search-icon{
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%) translateX(-100%);
+}
+
+.lesson-queue ul{
+    list-style: none;
+    padding: 0;
+}
+
+.lesson-queue ul li{
+    height: 50px;
+    line-height: 50px;
+    background: #2ECC71;
+    color: black;
+    text-indent: 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.lesson-queue ul li button{
+    text-align: right;
+    float: right;
+    height: 100%;
+    background: none;
+    border: none;
+    outline: none;
+    color: #E74C3C;
+}
+
+
+.lesson-queue-list{
+    max-height: 300px;
+    overflow: auto;
+}
+
+.lesson-info-box{
+    height: 200px;
+    border: 1px solid darkblue;
+    border-radius: 10px;
+    overflow: auto;
+}
+
+#success-lesson-info{
+    height: 100px;
+}
+
+.outside-branch{
+    width: 100%;
+    margin-top: 30px;
+    height: 200px;
+}
+
+.publication-info{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: 1px dashed;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.mark-board iframe{
+    height: 500px !important;
+}

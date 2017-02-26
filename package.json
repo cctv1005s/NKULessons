@@ -1,0 +1,16 @@
+{
+  "name": "NKULessons",
+  "version": "0.1.0",
+  "main": "main.js",
+  "dependencies": {
+    "cheerio": "^0.22.0",
+    "ejs": "^2.5.5",
+    "eventproxy": "^0.3.5",
+    "getmac": "^1.2.1",
+    "request": "^2.79.0"
+  },
+  "test": "test.js",
+  "devDependencies": {
+    "electron-packager": "^8.5.1"
+  }
+}
