@@ -12,5 +12,10 @@
   "test": "test.js",
   "devDependencies": {
     "electron-packager": "^8.5.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "export NODE_ENV=development && electron .",
+    "start": "export NODE_ENV=production && electron ."
   }
 }

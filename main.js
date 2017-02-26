@@ -30,8 +30,10 @@ app.on('ready', function() {
   // 加载应用的 index.html
   mainWindow.loadURL("file://" + __dirname + "/client/index.html");
 
+
   // 打开开发工具
-  mainWindow.openDevTools();
+  if(process.env.NODE_ENV == 'development')
+  	mainWindow.openDevTools();
 
   // 当 window 被关闭，这个事件会被发出
   mainWindow.on('closed', function() {
