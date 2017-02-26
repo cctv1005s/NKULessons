@@ -1,10 +1,22 @@
-#南开大学刷课软件
+# 南开大学刷课软件
+南开大学选课用的刷课软件，用于在正选，补选的时候的刷课抢课的．用electron编写．兼容性参见electron支持．
 
-###使用
-先安装依赖
+### 配置
+需要安装nodejs和npm
+
+### 快速使用
+- 安装electron
+
+	$	npm install electron -g
+
+如果在mac或linux下出现权限错误，请加 sudo
+
+-	安装依赖
+
 
 	$	npm install 
-安装好依赖之后
+
+-	使用
 
 开发模式
 
@@ -14,6 +26,10 @@
 
 	$	npm run start
 
+
+-	打包
+
+打包请使用 electron-packager
 
 
 项目截图
