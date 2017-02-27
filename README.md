@@ -7,7 +7,8 @@
 ### 快速使用
 - 安装electron
 
-	$	npm install electron -g
+	
+    $	npm install electron -g
 
 如果在mac或linux下出现权限错误，请加 sudo
 
