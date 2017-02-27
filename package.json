@@ -11,10 +11,11 @@
   },
   "test": "test.js",
   "devDependencies": {
+    "chai": "^3.5.0",
     "electron-packager": "^8.5.1"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "mocha",
     "dev": "export NODE_ENV=development && electron .",
     "start": "export NODE_ENV=production && electron ."
   }
