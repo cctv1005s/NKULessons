@@ -6,29 +6,27 @@
 
 ### 快速使用
 - 安装electron
-
-	
-    $	npm install electron -g
+    
+        $   npm install electron -g
 
 如果在mac或linux下出现权限错误，请加 sudo
 
--	安装依赖
+-   安装依赖
 
+        $    npm install
 
-	$	npm install 
-
--	使用
+-   使用
 
 开发模式
 
-	$	npm run dev
+    $   npm run dev
 
 正常模式
 
-	$	npm run start
+    $   npm run start
 
 
--	打包
+-   打包
 
 打包请使用 electron-packager
 
