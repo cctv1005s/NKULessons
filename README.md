@@ -19,15 +19,15 @@
 
 开发模式
 
-    $   npm run dev
+    $   npm dev
 
 正常模式
 
-    $   npm run start
+    $   npm start
 
 -   测试
 
-        $   npm run start
+        $   npm start
 
 -   打包
 
